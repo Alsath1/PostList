@@ -1,0 +1,80 @@
+$white: #FFFFFF
+$white-bg-1: #101012
+$base-Brand: #9EEB18
+$bg-2: #EDEEF0
+
+$text-1: #111827
+$text-2: #5A616C
+$text-3: #9299A5
+$border-1: #EBEDF1
+$btn-secondary-gray: #F4F5F6
+$light-brand: #E5EEFC
+
+// Mixins
+
+@mixin base-button
+	display: flex
+	justify-content: center
+	align-items: center
+	outline: none
+	border: none
+	border-radius: 12px
+	padding: 15px 32px
+	cursor: pointer
+	font-weight: 500
+	font-size: 18px
+	line-height: 133%
+	text-align: center
+
+@mixin burger-button
+	border: none
+	align-items: center
+	justify-content: center
+	border-radius: 10px
+	padding: 12px
+	background-color: $light-brand
+	@include backgroundColorOnHover(#23232a,#2C2C36,#2C2C36)
+
+@mixin swiper-button
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 52px
+	height: 52px
+	border-radius: 12px
+	background: $white
+	border: 2px #EBEDF1 solid
+	outline: none
+	cursor: pointer
+	&:hover
+		border: 2px #D2D6DC solid
+
+@mixin touch
+	@media (hover: none)
+		@content
+
+@mixin backgroundColorOnHover($baseColor, $hoveredColor,$activeColor)
+	transition: 0.3s background-color
+	background-color: $baseColor
+
+	&:hover
+		background-color: $hoveredColor
+
+	&:active
+		background-color: $activeColor
+
+	@include touch
+		&:hover
+			background-color: $baseColor
+
+		&:active
+			background-color: $activeColor
+
+// Media
+$breakpoint_desktop_horizontal: 1750px
+$breakpoint_desktop_1550: 1550px
+$breakpoint_desktop_1400: 1400px
+$breakpoint_notebook_horizontal: 1179px
+$breakpoint_tablet_vertical: 1024px
+$breakpoint_phone_vertical: 600px
+$breakpoint_phone_small: 350px
