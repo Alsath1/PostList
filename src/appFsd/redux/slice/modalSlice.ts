@@ -4,7 +4,7 @@ interface States {
     isOpenMainModal: boolean;
 }
 
-const initialState: States = { isOpenMainModal: true };
+const initialState: States = { isOpenMainModal: false };
 
 export const modalSlice = createSlice({
     name: 'modalSlice',
