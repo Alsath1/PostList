@@ -12,7 +12,11 @@ export const modalSlice = createSlice({
     reducers: {
         SetIsOpenMainModal(state, action) {
             state.isOpenMainModal = action.payload;
+        },
+        SetIsOpenMainModal(state, action) {
+            state.isOpenMainModal = action.payload;
         }
+        
     }
 });
 

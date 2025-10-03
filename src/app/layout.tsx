@@ -31,7 +31,7 @@ export default function RootLayout({
         <html lang='en'>
             <body className={`${roboto.variable}`}>
                 <ReduxProvider>
-                    <Header />
+                    {/* <Header /> */}
                     <div className='childrenWrapper'>{children}</div>
                     <ModalList />
                 </ReduxProvider>
